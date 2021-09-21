@@ -50,3 +50,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Iso files
+*.iso
+
+# binary folder
+bin
+
+# vs code folder
+.vscode/

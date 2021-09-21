@@ -38,6 +38,10 @@ SDL_Joystick *Joystick = NULL;
 
 static SDL_Joystick *sdl_joysticks;
 
+#ifdef NXDK
+static SDL_GameController *sdl_gameController = NULL;
+#endif
+
 static qboolean mouse_avail;
 static float   mouse_x, mouse_y;
 static int mouse_oldbuttonstate = 0;
@@ -96,10 +100,14 @@ void    VID_Init (unsigned char *palette)
     byte *cache;
     int cachesize;
 
+    // Load the SDL library
+    if (SDL_Init(SDL_INIT_GAMECONTROLLER) < 0)
+        Sys_Error("VID: Couldn't load SDL: %s", SDL_GetError());
 
     SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 
-    if (SDL_VideoInit(NULL) < 0) {
+    if (SDL_VideoInit(NULL) < 0) 
+    {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't initialize SDL video.\n");
         printSDLErrorAndReboot();
     }
@@ -116,7 +124,8 @@ void    VID_Init (unsigned char *palette)
         printSDLErrorAndReboot();
     }
 
-    if (!(IMG_Init(IMG_INIT_JPG) & IMG_INIT_JPG)) {
+    if (!(IMG_Init(IMG_INIT_JPG) & IMG_INIT_JPG))
+    {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't intialize SDL_image.\n");
         SDL_VideoQuit();
         printIMGErrorAndReboot();
@@ -124,14 +133,16 @@ void    VID_Init (unsigned char *palette)
 
     debugPrint("SDL_GetWindowSurface\n");
     realScreen = SDL_GetWindowSurface(window);
-    if (!realScreen) {
+    if (!realScreen)
+    {
         SDL_VideoQuit();
         printSDLErrorAndReboot();
     }
 
     debugPrint("screen SDL_CreateRGBSurface\n");
     screen = SDL_CreateRGBSurface(SDL_SWSURFACE, BASEWIDTH, BASEHEIGHT, 8, 0, 0, 0, 0);
-    if (!screen) {
+    if (!screen)
+    {
         SDL_VideoQuit();
         printSDLErrorAndReboot();
     }
@@ -342,6 +353,32 @@ void Sys_SendKeyEvents(void)
     {
         switch (event.type) {
 			
+#ifdef NXDK
+            case SDL_CONTROLLERDEVICEADDED:
+                SDL_GameController *new_pad = SDL_GameControllerOpen(event.cdevice.which);
+                if (sdl_gameController == NULL)
+                {
+                    sdl_gameController = new_pad;
+                }
+                break;
+
+            case SDL_CONTROLLERDEVICEREMOVED:
+                if (sdl_gameController == SDL_GameControllerFromInstanceID(event.cdevice.which))
+                {
+                    sdl_gameController = NULL;
+                }
+                SDL_GameControllerClose(SDL_GameControllerFromInstanceID(event.cdevice.which));
+                break;
+
+            case SDL_CONTROLLERBUTTONDOWN:
+                if (event.cbutton.button == SDL_CONTROLLER_BUTTON_START)
+                {
+                    sdl_gameController = (SDL_GameControllerFromInstanceID(event.cdevice.which));
+                }
+                break;
+#endif
+
+
             case SDL_KEYDOWN:
             case SDL_KEYUP:
                 sym = event.key.keysym.sym;
@@ -592,6 +629,79 @@ static void Joy_UpdateButtons()
 	static int		joy_oldbuttons = 0;
 	static int		old_left = 0, old_right = 0, old_back = 0, old_hat = 0, old_button;
 
+#if NXDK
+    if(sdl_gameController)
+    {
+        SDL_GameControllerUpdate();
+
+        // Update dpad
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_DPAD_UP) == SDL_PRESSED) 
+            Key_Event(K_DPAD_UP, 1);
+        else
+            Key_Event(K_DPAD_UP, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_DPAD_DOWN) == SDL_PRESSED) 
+            Key_Event(K_DPAD_DOWN, 1);
+        else
+            Key_Event(K_DPAD_DOWN, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_DPAD_LEFT) == SDL_PRESSED) 
+            Key_Event(K_DPAD_LEFT, 1);
+        else
+            Key_Event(K_DPAD_LEFT, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_DPAD_RIGHT) == SDL_PRESSED) 
+            Key_Event(K_DPAD_RIGHT, 1);
+        else
+            Key_Event(K_DPAD_RIGHT, 0);
+
+        // Update buttons
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_A) == SDL_PRESSED)
+            Key_Event(K_XBOX_A, 1);
+        else if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_A) == SDL_RELEASED)
+            Key_Event(K_XBOX_A, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_B) == SDL_PRESSED)
+            Key_Event(K_XBOX_B, 1);
+        else if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_B) == SDL_RELEASED)
+            Key_Event(K_XBOX_B, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_X) == SDL_PRESSED)
+            Key_Event(K_XBOX_X, 1);
+        else if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_X) == SDL_RELEASED)
+            Key_Event(K_XBOX_X, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_Y) == SDL_PRESSED)
+            Key_Event(K_XBOX_Y, 1);
+        else if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_Y) == SDL_RELEASED)
+            Key_Event(K_XBOX_Y, 0); 
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_START) == SDL_PRESSED)
+            Key_Event(K_XBOX_START, 1);
+        else if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_START) == SDL_RELEASED)
+            Key_Event(K_XBOX_START, 0);
+
+        if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_BACK) == SDL_PRESSED)
+            Key_Event(K_XBOX_BACK, 1);
+        else if (SDL_GameControllerGetButton(sdl_gameController,SDL_CONTROLLER_BUTTON_BACK) == SDL_RELEASED)
+            Key_Event(K_XBOX_BACK, 0);
+
+        // Update triggers
+        if(SDL_GameControllerGetAxis(sdl_gameController, SDL_CONTROLLER_AXIS_TRIGGERLEFT) > 11000)
+            Key_Event(K_XBOX_LTRIG, 1);
+        else
+            Key_Event(K_XBOX_LTRIG, 0);
+
+        if(SDL_GameControllerGetAxis(sdl_gameController, SDL_CONTROLLER_AXIS_TRIGGERRIGHT) > 11000)
+            Key_Event(K_XBOX_RTRIG, 1);
+        else
+            Key_Event(K_XBOX_RTRIG, 0);
+
+        // Done
+        return;
+    }
+#endif
+
 	SDL_JoystickUpdate();
 
 	hat = SDL_JoystickGetHat(sdl_joysticks,0);
@@ -733,6 +843,17 @@ static void Joy_UpdateAxis(usercmd_t *cmd, char mode, float scale, int rawvalue)
 
 static void Joy_UpdateAxes(usercmd_t *cmd)
 {
+    #ifdef NXDK
+    if(sdl_gameController)
+    {
+        Joy_UpdateAxis(cmd, axis_x_function.string[0], axis_x_scale.value, (SDL_GameControllerGetAxis(sdl_gameController, SDL_CONTROLLER_AXIS_LEFTX) * 128)/32768);
+        Joy_UpdateAxis(cmd, axis_y_function.string[0], axis_y_scale.value, (SDL_GameControllerGetAxis(sdl_gameController, SDL_CONTROLLER_AXIS_LEFTY) * 128)/32768);
+        Joy_UpdateAxis(cmd, axis_x2_function.string[0], axis_x2_scale.value, (SDL_GameControllerGetAxis(sdl_gameController, SDL_CONTROLLER_AXIS_RIGHTX) * 128)/32768);
+        Joy_UpdateAxis(cmd, axis_y2_function.string[0], axis_y2_scale.value, (SDL_GameControllerGetAxis(sdl_gameController, SDL_CONTROLLER_AXIS_RIGHTY) * 128)/32768);
+        return;
+    }
+    #endif
+
 	Joy_UpdateAxis(cmd, axis_x_function.string[0], axis_x_scale.value, (SDL_JoystickGetAxis(sdl_joysticks,0) * 128)/32768);
 	Joy_UpdateAxis(cmd, axis_y_function.string[0], axis_y_scale.value, (SDL_JoystickGetAxis(sdl_joysticks,1) * 128)/32768);
 	Joy_UpdateAxis(cmd, axis_x2_function.string[0], axis_x2_scale.value, (SDL_JoystickGetAxis(sdl_joysticks,2) * 128)/32768);
