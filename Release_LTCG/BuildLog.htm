@@ -1,0 +1,1326 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=Windows-1252">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: QuakeX, Configuration: Release_LTCG|Xbox -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000042.rsp" with contents
+[
+/O2 /GL /I "C:\mssdk\libSDLx\SDL\include" /D "NDEBUG" /D "_XBOX" /D "LTCG" /D "SDL" /D "__WIN32__" /D "_MBCS" /FD /EHsc /MT /arch:SSE /Fo"Release_LTCG/" /Fd"Release_LTCG/vc70.pdb" /W3 /c /Zi /TC
+".\zone.c"
+".\world.c"
+".\wad.c"
+".\view.c"
+".\vid_sdl.c"
+".\sys_sdl.c"
+".\sv_user.c"
+".\sv_phys.c"
+".\sv_move.c"
+".\sv_main.c"
+".\snd_sdl.c"
+".\snd_mix.c"
+".\snd_mem.c"
+".\snd_dma.c"
+".\screen.c"
+".\sbar.c"
+".\r_vars.c"
+".\r_surf.c"
+".\r_sprite.c"
+".\r_sky.c"
+".\r_part.c"
+".\r_misc.c"
+".\r_main.c"
+".\r_light.c"
+".\r_efrag.c"
+".\r_edge.c"
+".\r_draw.c"
+".\r_bsp.c"
+".\r_alias.c"
+".\r_aclip.c"
+".\pr_exec.c"
+".\pr_edict.c"
+".\pr_cmds.c"
+".\nonintel.c"
+".\net_vcr.c"
+".\net_none.c"
+".\net_main.c"
+".\net_loop.c"
+".\model.c"
+".\menu.c"
+".\mathlib.c"
+".\keys.c"
+".\host_cmd.c"
+".\host.c"
+".\draw.c"
+".\d_zpoint.c"
+".\d_vars.c"
+".\d_surf.c"
+".\d_sprite.c"
+".\d_sky.c"
+".\d_scan.c"
+".\d_polyse.c"
+".\d_part.c"
+".\d_modech.c"
+".\d_init.c"
+".\d_fill.c"
+".\d_edge.c"
+".\cvar.c"
+".\crc.c"
+".\console.c"
+".\common.c"
+".\cmd.c"
+".\cl_tent.c"
+".\cl_parse.c"
+".\cl_main.c"
+".\cl_input.c"
+".\cl_demo.c"
+".\chase.c"
+".\cd_sdl.c"
+]
+Creating command line "cl.exe @"c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000042.rsp" /nologo"
+Creating temporary file "c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000043.rsp" with contents
+[
+/OUT:"Release_LTCG/QuakeX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\mssdk\libSDLx\Release" /DEBUG /PDB:"Release_LTCG/QuakeX.pdb" /MAP /OPT:REF /OPT:ICF /LTCG /RELEASE /subsystem:xbox /MACHINE:I386 xapilib.lib d3d8ltcg.lib d3dx8.lib xgraphicsltcg.lib dsound.lib dmusicltcg.lib xactengltcg.lib xsndtrk.lib xvoice.lib xonlines.lib xboxkrnl.lib libSDLx.lib "\mssdk\libsdlx\release\libSDLx.lib"
+".\Release_LTCG\cd_sdl.obj"
+".\Release_LTCG\chase.obj"
+".\Release_LTCG\cl_demo.obj"
+".\Release_LTCG\cl_input.obj"
+".\Release_LTCG\cl_main.obj"
+".\Release_LTCG\cl_parse.obj"
+".\Release_LTCG\cl_tent.obj"
+".\Release_LTCG\cmd.obj"
+".\Release_LTCG\common.obj"
+".\Release_LTCG\console.obj"
+".\Release_LTCG\crc.obj"
+".\Release_LTCG\cvar.obj"
+".\Release_LTCG\d_edge.obj"
+".\Release_LTCG\d_fill.obj"
+".\Release_LTCG\d_init.obj"
+".\Release_LTCG\d_modech.obj"
+".\Release_LTCG\d_part.obj"
+".\Release_LTCG\d_polyse.obj"
+".\Release_LTCG\d_scan.obj"
+".\Release_LTCG\d_sky.obj"
+".\Release_LTCG\d_sprite.obj"
+".\Release_LTCG\d_surf.obj"
+".\Release_LTCG\d_vars.obj"
+".\Release_LTCG\d_zpoint.obj"
+".\Release_LTCG\draw.obj"
+".\Release_LTCG\host.obj"
+".\Release_LTCG\host_cmd.obj"
+".\Release_LTCG\keys.obj"
+".\Release_LTCG\mathlib.obj"
+".\Release_LTCG\menu.obj"
+".\Release_LTCG\model.obj"
+".\Release_LTCG\net_loop.obj"
+".\Release_LTCG\net_main.obj"
+".\Release_LTCG\net_none.obj"
+".\Release_LTCG\net_vcr.obj"
+".\Release_LTCG\nonintel.obj"
+".\Release_LTCG\pr_cmds.obj"
+".\Release_LTCG\pr_edict.obj"
+".\Release_LTCG\pr_exec.obj"
+".\Release_LTCG\r_aclip.obj"
+".\Release_LTCG\r_alias.obj"
+".\Release_LTCG\r_bsp.obj"
+".\Release_LTCG\r_draw.obj"
+".\Release_LTCG\r_edge.obj"
+".\Release_LTCG\r_efrag.obj"
+".\Release_LTCG\r_light.obj"
+".\Release_LTCG\r_main.obj"
+".\Release_LTCG\r_misc.obj"
+".\Release_LTCG\r_part.obj"
+".\Release_LTCG\r_sky.obj"
+".\Release_LTCG\r_sprite.obj"
+".\Release_LTCG\r_surf.obj"
+".\Release_LTCG\r_vars.obj"
+".\Release_LTCG\sbar.obj"
+".\Release_LTCG\screen.obj"
+".\Release_LTCG\snd_dma.obj"
+".\Release_LTCG\snd_mem.obj"
+".\Release_LTCG\snd_mix.obj"
+".\Release_LTCG\snd_sdl.obj"
+".\Release_LTCG\sv_main.obj"
+".\Release_LTCG\sv_move.obj"
+".\Release_LTCG\sv_phys.obj"
+".\Release_LTCG\sv_user.obj"
+".\Release_LTCG\sys_sdl.obj"
+".\Release_LTCG\vid_sdl.obj"
+".\Release_LTCG\view.obj"
+".\Release_LTCG\wad.obj"
+".\Release_LTCG\world.obj"
+".\Release_LTCG\zone.obj"
+]
+Creating command line "link.exe @"c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000043.rsp""
+Creating temporary file "c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000044.rsp" with contents
+[
+/OUT:"c:\mssdk\sdlquake-1.0.9\Release_LTCG\QuakeX.xbe" /stack:"524288" /limitmem /testid:"0xFFFF1D1D" /testname:"Quake - Xbox"
+".\Release_LTCG\QuakeX.exe"
+]
+Creating command line "imagebld.exe @"c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000044.rsp" /nologo"
+Creating temporary file "c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000045.rsp" with contents
+[
+"c:\mssdk\sdlquake-1.0.9\Release_LTCG\QuakeX.xbe" "xe:\QuakeX\QuakeX.xbe"
+]
+Creating command line "xbecopy.exe @"c:\mssdk\sdlquake-1.0.9\Release_LTCG\RSP000045.rsp" /nologo"
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+zone.c
+world.c
+world.c(227) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+world.c(304) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+world.c(642) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+world.c(644) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+world.c(694) : warning C4305: '-=' : truncation from 'double' to 'float'
+wad.c
+wad.c(91) : warning C4018: '<' : signed/unsigned mismatch
+view.c
+view.c(89) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+view.c(90) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(117) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(120) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(122) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(127) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(129) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(199) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+view.c(216) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(217) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+view.c(281) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+view.c(331) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(335) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(337) : warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+view.c(643) : warning C4244: '-=' : conversion from 'double' to 'int', possible loss of data
+view.c(648) : warning C4244: '-=' : conversion from 'double' to 'int', possible loss of data
+view.c(714) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(719) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(724) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(753) : warning C4244: '-=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(754) : warning C4244: '-=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(755) : warning C4244: '-=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(795) : warning C4244: '+=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(796) : warning C4244: '+=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(797) : warning C4244: '+=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(819) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+view.c(932) : warning C4244: '+=' : conversion from 'double' to 'vec_t', possible loss of data
+view.c(965) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+view.c(1058) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+view.c(1059) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+vid_sdl.c
+vid_sdl.c(96) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+vid_sdl.c(60) : warning C4101: 'video_bpp' : unreferenced local variable
+vid_sdl.c(61) : warning C4101: 'video_w' : unreferenced local variable
+vid_sdl.c(61) : warning C4101: 'video_h' : unreferenced local variable
+vid_sdl.c(310) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+vid_sdl.c(311) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+vid_sdl.c(459) : warning C4101: 'i' : unreferenced local variable
+vid_sdl.c(550) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+vid_sdl.c(558) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sys_sdl.c
+sys_sdl.c(277) : warning C4013: 'mkdir' undefined; assuming extern returning int
+sys_sdl.c(349) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+sys_sdl.c(363) : warning C4013: 'SDL_Delay' undefined; assuming extern returning int
+sys_sdl.c(403) : warning C4018: '<' : signed/unsigned mismatch
+sys_sdl.c(464) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sys_sdl.c(382) : warning C4101: 'szCmdLine' : unreferenced local variable
+sys_sdl.c(378) : warning C4101: 'ldt' : unreferenced local variable
+sv_user.c
+sv_user.c(65) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(66) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(67) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(93) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+sv_user.c(132) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(151) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(199) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(220) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(235) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(272) : warning C4305: '*=' : truncation from 'double' to 'float'
+sv_user.c(280) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(299) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(312) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_user.c(446) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_user.c(456) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_user.c(457) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_user.c(458) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_user.c(462) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_user.c(463) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_user.c(467) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c
+sv_phys.c(135) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(160) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(286) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(389) : warning C4244: '-=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_phys.c(505) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(720) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(735) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(828) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(830) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_phys.c(933) : warning C4305: 'function' : truncation from 'double' to 'float'
+sv_phys.c(971) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(976) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1004) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_phys.c(1013) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1037) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(1067) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1110) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1116) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1128) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1178) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1179) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1213) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(1224) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(1234) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(1296) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1302) : warning C4244: 'function' : conversion from 'double' to 'vec_t', possible loss of data
+sv_phys.c(1332) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_phys.c(1482) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_phys.c(1515) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_move.c
+sv_move.c(71) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_move.c(72) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_move.c(183) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_move.c(210) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_move.c(241) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+sv_move.c(242) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_move.c(243) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+sv_move.c(272) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_move.c(290) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+sv_move.c(312) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_move.c(314) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_move.c(321) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_move.c(321) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c
+sv_main.c(92) : warning C4244: '=' : conversion from 'vec_t' to 'int', possible loss of data
+sv_main.c(166) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(170) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_main.c(221) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(222) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(527) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(529) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(531) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(533) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(535) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(565) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+sv_main.c(593) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(594) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(596) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_main.c(668) : warning C4244: 'function' : conversion from 'vec_t' to 'int', possible loss of data
+sv_main.c(671) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(676) : warning C4244: 'function' : conversion from 'vec_t' to 'int', possible loss of data
+sv_main.c(678) : warning C4244: 'function' : conversion from 'vec_t' to 'int', possible loss of data
+sv_main.c(685) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(687) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(691) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(692) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(693) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(694) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(695) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(696) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(700) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(730) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+sv_main.c(772) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(775) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(945) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(946) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(1019) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+sv_main.c(1176) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+snd_sdl.c
+snd_mix.c
+snd_mix.c(82) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_mix.c(178) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_mem.c
+snd_mem.c(48) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_mem.c(51) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_mem.c(73) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_mem.c(135) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_dma.c
+snd_dma.c(436) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+snd_dma.c(437) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+snd_dma.c(441) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+snd_dma.c(446) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+snd_dma.c(407) : warning C4101: 'rdist' : unreferenced local variable
+snd_dma.c(407) : warning C4101: 'ldist' : unreferenced local variable
+snd_dma.c(474) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_dma.c(502) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+snd_dma.c(657) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_dma.c(706) : warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+snd_dma.c(708) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+snd_dma.c(712) : warning C4244: '-=' : conversion from 'double' to 'int', possible loss of data
+snd_dma.c(714) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+screen.c
+screen.c(94) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+screen.c(117) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+screen.c(135) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+screen.c(143) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+screen.c(178) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+screen.c(203) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+screen.c(205) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+screen.c(207) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+screen.c(246) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+screen.c(246) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+screen.c(273) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+screen.c(458) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+screen.c(462) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+screen.c(468) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+screen.c(475) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+screen.c(505) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+screen.c(684) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+screen.c(715) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+sbar.c
+sbar.c(470) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+sbar.c(471) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+sbar.c(1209) : warning C4018: '<' : signed/unsigned mismatch
+sbar.c(1169) : warning C4101: 'pic' : unreferenced local variable
+r_vars.c
+r_surf.c
+r_surf.c(86) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+r_surf.c(106) : warning C4244: '=' : conversion from 'vec_t' to 'int', possible loss of data
+r_surf.c(111) : warning C4244: '=' : conversion from 'vec_t' to 'int', possible loss of data
+r_surf.c(115) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_surf.c(117) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_surf.c(135) : warning C4244: '+=' : conversion from 'float' to 'unsigned int', possible loss of data
+r_sprite.c
+r_sprite.c(167) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_sprite.c(173) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_sprite.c(174) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_sprite.c(180) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_sprite.c(205) : warning C4305: '=' : truncation from 'double' to 'vec_t'
+r_sprite.c(208) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_sprite.c(262) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_sprite.c(381) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_sprite.c(382) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_sprite.c(383) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_sky.c
+r_sky.c(105) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_sky.c(106) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_sky.c(169) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_sky.c(170) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_sky.c(228) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_sky.c(229) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_sky.c(266) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_sky.c(267) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_sky.c(272) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_sky.c(274) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Compiling...
+r_part.c
+r_part.c(121) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+r_part.c(122) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+r_part.c(140) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_part.c(146) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(147) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(148) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(149) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(150) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(151) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(152) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(153) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(154) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(167) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(234) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(259) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_part.c(291) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(292) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(293) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(300) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(309) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(336) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(337) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(344) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(369) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(374) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(378) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(384) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(388) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(416) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(417) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(418) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(425) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(434) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(440) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(441) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(477) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(478) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(481) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(482) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(490) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(519) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(520) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(523) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(524) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(525) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_part.c(532) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(568) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(573) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(574) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(581) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(582) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(590) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(597) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(600) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(602) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(621) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(628) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(630) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(677) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(681) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_part.c(743) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(752) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_part.c(763) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_misc.c
+r_misc.c(76) : warning C4244: '=' : conversion from 'vec_t' to 'int', possible loss of data
+r_misc.c(78) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_misc.c(81) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_misc.c(96) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_misc.c(100) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+r_misc.c(124) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_misc.c(158) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_misc.c(160) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_misc.c(199) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_misc.c(218) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_misc.c(402) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_misc.c(445) : warning C4018: '<=' : signed/unsigned mismatch
+r_misc.c(446) : warning C4018: '<=' : signed/unsigned mismatch
+r_misc.c(457) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+r_misc.c(458) : warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
+r_misc.c(463) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_misc.c(468) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_main.c
+r_main.c(258) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_main.c(282) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_main.c(324) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_main.c(327) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(331) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_main.c(367) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(369) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(372) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(376) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(377) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(380) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(410) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(413) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(418) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(421) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(426) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_main.c(433) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_main.c(440) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_main.c(446) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+r_main.c(455) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(580) : warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+r_main.c(656) : warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+r_main.c(908) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(922) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(930) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(960) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(997) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(1005) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(1013) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(1014) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(1020) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_main.c(1081) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_main.c(1082) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_light.c
+r_light.c(193) : warning C4244: '=' : conversion from 'vec_t' to 'int', possible loss of data
+r_light.c(194) : warning C4244: '=' : conversion from 'vec_t' to 'int', possible loss of data
+r_efrag.c
+r_edge.c
+r_draw.c
+r_draw.c(107) : warning C4305: '=' : truncation from 'double' to 'vec_t'
+r_draw.c(109) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_draw.c(136) : warning C4305: '=' : truncation from 'double' to 'vec_t'
+r_draw.c(138) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_draw.c(215) : warning C4244: '=' : conversion from 'float' to 'fixed16_t', possible loss of data
+r_draw.c(216) : warning C4244: '=' : conversion from 'float' to 'fixed16_t', possible loss of data
+r_draw.c(566) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_draw.c(681) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_draw.c(836) : warning C4305: '=' : truncation from 'double' to 'vec_t'
+r_draw.c(838) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c
+r_bsp.c(90) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(91) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(92) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(107) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(108) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(109) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(125) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(126) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_bsp.c(127) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c
+c:\mssdk\sdlquake-1.0.9\anorms.h(20) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(20) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(21) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(21) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(21) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(22) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(22) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(23) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(23) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(24) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(24) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(24) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(26) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(26) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(27) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(27) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(27) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(28) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(28) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(28) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(29) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(29) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(30) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(30) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(31) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(31) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(32) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(32) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(33) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(33) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(33) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(34) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(34) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(34) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(35) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(35) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(35) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(36) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(36) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(37) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(37) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(37) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(38) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(38) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(39) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(39) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(39) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(40) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(40) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(40) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(41) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(41) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(41) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(42) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(42) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(43) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(43) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(43) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(44) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(44) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(44) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(45) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(45) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(45) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(46) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(46) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(47) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(47) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(48) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(48) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(49) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(49) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(49) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(50) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(50) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(51) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(51) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(51) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(53) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(53) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(54) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(54) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(54) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(55) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(55) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(55) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(56) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(56) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(56) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(57) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(57) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(58) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(58) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(58) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(59) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(59) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(59) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(60) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(60) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(61) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(61) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(62) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(62) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(62) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(63) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(63) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(63) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(64) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(64) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(65) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(65) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(65) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(66) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(66) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(66) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(67) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(67) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(67) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(68) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(68) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(69) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(69) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(69) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(70) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(70) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(70) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(71) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(71) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(73) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(73) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(73) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(74) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(74) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(75) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(75) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(76) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(76) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(76) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(77) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(77) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(77) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(78) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(78) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(79) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(79) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(79) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(80) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(80) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(81) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(81) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(81) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(82) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(82) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(83) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(83) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(83) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(84) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(84) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(85) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(85) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(85) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(86) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(86) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(86) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(87) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(87) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(88) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(88) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(89) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(89) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(89) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(90) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(90) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(90) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(91) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(91) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(91) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(92) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(92) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(93) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(93) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(93) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(94) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(94) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(94) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(95) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(95) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(95) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(96) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(96) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(96) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(97) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(97) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(97) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(98) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(98) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(99) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(99) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(100) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(100) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(101) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(101) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(101) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(102) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(102) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(103) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(103) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(103) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(105) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(105) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(106) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(106) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(106) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(107) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(107) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(107) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(108) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(108) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(109) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(109) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(109) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(110) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(110) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(111) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(111) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(111) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(112) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(112) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(112) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(113) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(113) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(114) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(114) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(115) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(115) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(115) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(116) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(116) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(116) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(117) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(117) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(117) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(118) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(118) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(119) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(119) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(119) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(120) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(120) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(120) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(121) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(121) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(121) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(122) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(122) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(122) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(123) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(123) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(125) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(125) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(125) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(126) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(126) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(127) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(127) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(128) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(128) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(128) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(129) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(129) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(129) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(130) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(130) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(131) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(131) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(131) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(132) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(132) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(133) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(133) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(133) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(134) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(134) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(135) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(135) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(135) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(136) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(136) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(137) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(137) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(137) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(138) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(138) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(138) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(139) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(139) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(140) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(140) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(141) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(141) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(141) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(142) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(142) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(142) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(143) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(143) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(143) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(144) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(144) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(145) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(145) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(145) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(146) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(146) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(146) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(147) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(147) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(147) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(148) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(148) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(148) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(149) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(149) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(150) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(150) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(150) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(151) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(151) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(151) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(152) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(152) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(152) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(153) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(153) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(153) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(154) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(154) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(154) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(155) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(155) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(156) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(156) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(156) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(157) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(157) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(158) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(158) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(158) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(159) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(159) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(159) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(160) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(160) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(160) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(161) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(161) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(162) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(162) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(162) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(164) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(164) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(165) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(165) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(166) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(166) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(166) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(167) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(167) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(167) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(168) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(168) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(168) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(169) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(169) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(170) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(170) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(170) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(171) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(171) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(171) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(172) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(172) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(173) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(173) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(173) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(174) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(174) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(174) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(175) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(175) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(176) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(176) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(176) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(177) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(177) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(177) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(178) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(178) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(178) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(179) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(179) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(179) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(180) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(180) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(180) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(181) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(181) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+c:\mssdk\sdlquake-1.0.9\anorms.h(181) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+r_alias.c(157) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(210) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c(400) : warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c(402) : warning C4244: '*=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c(471) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c(476) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(479) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(481) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(519) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c(521) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(523) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(524) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_alias.c(589) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_alias.c(632) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+r_alias.c(679) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+r_aclip.c
+r_aclip.c(64) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_aclip.c(65) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_aclip.c(66) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_aclip.c(77) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_aclip.c(78) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_aclip.c(79) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+r_aclip.c(107) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(114) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(130) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(137) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(152) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(159) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(176) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+r_aclip.c(184) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+pr_exec.c
+pr_exec.c(452) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(456) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(461) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(464) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(467) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(470) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(473) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(476) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(480) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(483) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(486) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(489) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(492) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(496) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(501) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(504) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(507) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(510) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(515) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(520) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(523) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(526) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(529) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_exec.c(654) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_edict.c
+pr_edict.c(138) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_edict.c(746) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_edict.c(758) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_edict.c(913) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c
+pr_cmds.c(158) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(160) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(161) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(162) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(163) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(254) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(359) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(389) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(412) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(446) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(450) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(451) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(496) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(496) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(538) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(539) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(567) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(569) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(618) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(901) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+pr_cmds.c(941) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(1164) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(1166) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+pr_cmds.c(1167) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+pr_cmds.c(1208) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(1228) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1252) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(1254) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(1258) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(1262) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+pr_cmds.c(1291) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+pr_cmds.c(1376) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+pr_cmds.c(1512) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1541) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1546) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1551) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1556) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1595) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1596) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+pr_cmds.c(1597) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+nonintel.c
+net_vcr.c
+net_none.c
+net_main.c
+net_loop.c
+model.c
+model.c(750) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+model.c(751) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+model.c(1132) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+model.c(1511) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+model.c(1694) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+model.c(1695) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+model.c(1696) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+model.c(1697) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+model.c(1810) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+model.c(1811) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+model.c(1812) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+model.c(1813) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+menu.c
+menu.c(465) : warning C4129: 's' : unrecognized character escape sequence
+menu.c(1113) : warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+menu.c(1121) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+menu.c(1130) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+menu.c(1141) : warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+menu.c(1167) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+menu.c(1171) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+menu.c(1195) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+menu.c(1230) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+menu.c(1252) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+menu.c(1255) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+menu.c(2741) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+menu.c(2754) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+Compiling...
+mathlib.c
+mathlib.c(71) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(134) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(135) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(136) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(137) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(163) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(297) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(298) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(299) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(300) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(301) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(302) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(303) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(304) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(305) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(380) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+mathlib.c(390) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+keys.c
+keys.c(241) : warning C4018: '>' : signed/unsigned mismatch
+host_cmd.c
+host_cmd.c(124) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(142) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(514) : warning C4129: '%' : unrecognized character escape sequence
+host_cmd.c(585) : warning C4129: '%' : unrecognized character escape sequence
+host_cmd.c(1172) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1179) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1206) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+host_cmd.c(1309) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1310) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1320) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+host_cmd.c(1336) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+host_cmd.c(1364) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+host_cmd.c(1368) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+host_cmd.c(1372) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+host_cmd.c(1376) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+host_cmd.c(1447) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+host_cmd.c(1552) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1554) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1557) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1559) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1561) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1566) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1575) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1578) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1586) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1588) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1593) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1602) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1604) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1614) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1616) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1621) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1630) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1632) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1637) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1645) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1647) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1652) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1661) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1663) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1519) : warning C4101: 'w' : unreferenced local variable
+host_cmd.c(1730) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1764) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+host_cmd.c(1766) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+host_cmd.c(1789) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+host.c
+host.c(612) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+host.c(727) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+host.c(729) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+host.c(730) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+host.c(768) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+draw.c
+draw.c(112) : warning C4101: 'i' : unreferenced local variable
+draw.c(296) : warning C4018: '>' : signed/unsigned mismatch
+draw.c(298) : warning C4018: '>' : signed/unsigned mismatch
+draw.c(565) : warning C4018: '<' : signed/unsigned mismatch
+draw.c(583) : warning C4018: '<' : signed/unsigned mismatch
+draw.c(609) : warning C4018: '<' : signed/unsigned mismatch
+draw.c(853) : warning C4018: '<' : signed/unsigned mismatch
+draw.c(860) : warning C4018: '<' : signed/unsigned mismatch
+d_zpoint.c
+d_vars.c
+d_surf.c
+d_surf.c(293) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c
+d_sprite.c(216) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c(223) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c(278) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c(291) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c(353) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c(400) : warning C4305: '=' : truncation from 'double' to 'float'
+d_sprite.c(401) : warning C4305: '=' : truncation from 'double' to 'float'
+d_sprite.c(421) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sprite.c(422) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sky.c
+d_sky.c(45) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sky.c(46) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_sky.c(111) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+d_scan.c
+d_polyse.c
+d_polyse.c(519) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+d_polyse.c(536) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(537) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(538) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(539) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(541) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_polyse.c(548) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(549) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(555) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(556) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(562) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(563) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(569) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_polyse.c(570) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+d_part.c
+d_part.c(75) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_part.c(108) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(121) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(127) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(140) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(146) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(152) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(165) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(171) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(177) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(183) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_part.c(198) : warning C4244: '=' : conversion from 'float' to 'byte', possible loss of data
+d_modech.c
+d_modech.c(98) : warning C4018: '<' : signed/unsigned mismatch
+d_init.c
+d_init.c(36) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+d_init.c(36) : warning C4305: 'initializing' : truncation from 'double' to 'float'
+d_init.c(139) : warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+d_fill.c
+d_fill.c(51) : warning C4018: '>' : signed/unsigned mismatch
+d_fill.c(53) : warning C4018: '>' : signed/unsigned mismatch
+d_edge.c
+d_edge.c(133) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+d_edge.c(156) : warning C4244: '=' : conversion from 'float' to 'fixed16_t', possible loss of data
+d_edge.c(159) : warning C4244: '=' : conversion from 'float' to 'fixed16_t', possible loss of data
+d_edge.c(231) : warning C4305: '=' : truncation from 'double' to 'float'
+cvar.c
+crc.c
+console.c
+console.c(323) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+console.c(364) : warning C4013: 'open' undefined; assuming extern returning int
+console.c(365) : warning C4013: 'write' undefined; assuming extern returning int
+console.c(366) : warning C4013: 'close' undefined; assuming extern returning int
+console.c(538) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Compiling...
+common.c
+common.c(384) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+common.c(393) : warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+common.c(416) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+common.c(423) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+common.c(740) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+common.c(745) : warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+common.c(1450) : warning C4129: '%' : unrecognized character escape sequence
+common.c(1738) : warning C4129: 'p' : unrecognized character escape sequence
+cmd.c
+cmd.c(458) : warning C4018: '>=' : signed/unsigned mismatch
+cl_tent.c
+cl_tent.c(88) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_tent.c(101) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_tent.c(202) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_tent.c(258) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_tent.c(362) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_tent.c(366) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_tent.c(367) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_tent.c(384) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+cl_parse.c
+cl_parse.c(119) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_parse.c(135) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+cl_parse.c(186) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_parse.c(338) : warning C4101: 'skin' : unreferenced local variable
+cl_parse.c(519) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_parse.c(524) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_parse.c(532) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+cl_parse.c(536) : warning C4244: '=' : conversion from 'int' to 'vec_t', possible loss of data
+cl_parse.c(549) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_parse.c(709) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+cl_parse.c(709) : warning C4244: 'function' : conversion from 'int' to 'float', possible loss of data
+cl_parse.c(944) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+cl_parse.c(950) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+cl_parse.c(957) : warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+cl_main.c
+cl_main.c(368) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(395) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(406) : warning C4305: '=' : truncation from 'double' to 'float'
+cl_main.c(408) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(478) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(550) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_main.c(552) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(559) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_main.c(560) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(566) : warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+cl_main.c(567) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(601) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_main.c(649) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_input.c
+cl_input.c(238) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_input.c(240) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_input.c(350) : warning C4244: 'function' : conversion from 'double' to 'float', possible loss of data
+cl_input.c(355) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+cl_input.c(356) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+cl_input.c(357) : warning C4244: 'function' : conversion from 'float' to 'int', possible loss of data
+cl_demo.c
+cl_demo.c(108) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+cl_demo.c(334) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+chase.c
+chase.c(55) : warning C4013: 'SV_RecursiveHullCheck' undefined; assuming extern returning int
+chase.c(87) : warning C4244: '=' : conversion from 'double' to 'vec_t', possible loss of data
+cd_sdl.c
+cd_sdl.c(145) : warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'xcommand_t'
+Linking...
+Generating code
+Finished generating code
+Creating Xbox Image...
+IMAGEBLD : warning IM1029: library XKBD is unapproved
+IMAGEBLD : warning IM1043: feature XMOUSE   is unapproved
+IMAGEBLD : warning IM1030: this image may not be accepted for certification
+Copying files to the Xbox...
+xbecopy: error X1001: Could not connect to Xbox ''
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://c:\mssdk\sdlquake-1.0.9\Release_LTCG\BuildLog.htm"
+QuakeX - 1 error(s), 1067 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>
