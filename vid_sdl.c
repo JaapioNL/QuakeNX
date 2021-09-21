@@ -1,8 +1,18 @@
 // vid_sdl.h -- sdl video driver 
 
 #include "SDL.h"
+#ifdef NXDK
+#include <hal/debug.h>
+#include <SDL_image.h>
+#include <hal/xbox.h>
+#include <windows.h>
+#endif
 #include "quakedef.h"
 #include "d_local.h"
+
+#if NXDK
+#include "sdl_stubs.h"
+#endif
 
 viddef_t    vid;                // global video state
 unsigned short  d_8to16table[256];
@@ -16,6 +26,12 @@ unsigned short  d_8to16table[256];
 
 int    VGA_width, VGA_height, VGA_rowbytes, VGA_bufferrowbytes = 0;
 byte    *VGA_pagebase;
+
+#ifdef NXDK
+SDL_Window *window;
+
+static SDL_Surface *realScreen = NULL;
+#endif
 
 static SDL_Surface *screen = NULL;
 SDL_Joystick *Joystick = NULL;
@@ -32,6 +48,25 @@ static void Joy_UpdateButtons();
 // No support for option menus
 void (*vid_menudrawfn)(void) = NULL;
 void (*vid_menukeyfn)(int key) = NULL;
+
+
+#ifdef NXDK
+static void printSDLErrorAndReboot(void)
+{
+    debugPrint("SDL_Error: %s\n", SDL_GetError());
+    debugPrint("Rebooting in 5 seconds.\n");
+    Sleep(15000);
+    XReboot();
+}
+
+static void printIMGErrorAndReboot(void)
+{
+    debugPrint("SDL_Image Error: %s\n", IMG_GetError());
+    debugPrint("Rebooting in 5 seconds.\n");
+    Sleep(15000);
+    XReboot();
+}
+#endif
  
 void    VID_SetPalette (unsigned char *palette)
 {
@@ -54,6 +89,92 @@ void    VID_ShiftPalette (unsigned char *palette)
 
 void    VID_Init (unsigned char *palette)
 {
+#ifdef NXDK
+    debugPrint("VID_Init\n");
+    // Setup the cache
+    int chunk;
+    byte *cache;
+    int cachesize;
+
+
+    SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
+
+    if (SDL_VideoInit(NULL) < 0) {
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't initialize SDL video.\n");
+        printSDLErrorAndReboot();
+    }
+
+    window = SDL_CreateWindow("Demo",
+        SDL_WINDOWPOS_UNDEFINED,
+        SDL_WINDOWPOS_UNDEFINED,
+        BASEWIDTH, BASEHEIGHT,
+        SDL_WINDOW_SHOWN);
+    if(window == NULL)
+    {
+        debugPrint( "Window could not be created!\n");
+        SDL_VideoQuit();
+        printSDLErrorAndReboot();
+    }
+
+    if (!(IMG_Init(IMG_INIT_JPG) & IMG_INIT_JPG)) {
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't intialize SDL_image.\n");
+        SDL_VideoQuit();
+        printIMGErrorAndReboot();
+    }
+
+    debugPrint("SDL_GetWindowSurface\n");
+    realScreen = SDL_GetWindowSurface(window);
+    if (!realScreen) {
+        SDL_VideoQuit();
+        printSDLErrorAndReboot();
+    }
+
+    debugPrint("screen SDL_CreateRGBSurface\n");
+    screen = SDL_CreateRGBSurface(SDL_SWSURFACE, BASEWIDTH, BASEHEIGHT, 8, 0, 0, 0, 0);
+    if (!screen) {
+        SDL_VideoQuit();
+        printSDLErrorAndReboot();
+    }
+
+    VID_SetPalette(palette);
+
+    vid.width = BASEWIDTH;
+    vid.height = BASEHEIGHT;
+    vid.maxwarpwidth = WARP_WIDTH;
+    vid.maxwarpheight = WARP_HEIGHT;
+    // now know everything we need to know about the buffer
+    VGA_width = vid.conwidth = vid.width;
+    VGA_height = vid.conheight = vid.height;
+    vid.aspect = ((float)vid.height / (float)vid.width) * (320.0 / 240.0);
+    vid.numpages = 1;
+    vid.colormap = host_colormap;
+    vid.fullbright = 256 - LittleLong (*((int *)vid.colormap + 2048));
+    VGA_pagebase = vid.buffer = screen->pixels;
+    VGA_rowbytes = vid.rowbytes = screen->pitch;
+    vid.conbuffer = vid.buffer;
+    vid.conrowbytes = vid.rowbytes;
+    vid.direct = 0;
+    
+
+
+    debugPrint("VID_Init: Create cache\n");
+
+    chunk = BASEWIDTH * BASEHEIGHT * sizeof (*d_pzbuffer);
+    cachesize = D_SurfaceCacheForRes (BASEWIDTH, BASEHEIGHT);
+    chunk += cachesize;
+    d_pzbuffer = Hunk_HighAllocName(chunk, "video");
+    if (d_pzbuffer == NULL)
+        Sys_Error ("Not enough memory for video mode\n");
+
+    // initialize the cache memory 
+        cache = (byte *) d_pzbuffer
+                + BASEWIDTH * BASEHEIGHT * sizeof (*d_pzbuffer);
+
+    debugPrint("VID_Init: Init caches\n");
+    D_InitCaches (cache, cachesize);
+
+    debugPrint("VID_Init: Done!\n");
+#else
     int pnum, chunk;
     byte *cache;
     int cachesize;
@@ -122,6 +243,7 @@ void    VID_Init (unsigned char *palette)
 	SDL_JoystickEventState(SDL_ENABLE);
     Joystick = SDL_JoystickOpen(0);
 
+#endif
 }
 
 void    VID_Shutdown (void)
@@ -131,6 +253,11 @@ void    VID_Shutdown (void)
 
 void    VID_Update (vrect_t *rects)
 {
+#ifdef NXDK
+    SDL_BlitSurface(screen, NULL, realScreen, NULL);
+
+    SDL_UpdateWindowSurface(window);
+#else
     SDL_Rect *sdlrects;
     int n, i;
     vrect_t *rect;
@@ -157,6 +284,7 @@ void    VID_Update (vrect_t *rects)
     SDL_UpdateRects(screen, n, sdlrects);
 
 	free(sdlrects);
+#endif
 }
 
 /*
@@ -188,9 +316,11 @@ D_EndDirectRect
 */
 void D_EndDirectRect (int x, int y, int width, int height)
 {
+#ifndef NXDK
     if (!screen) return;
     if (x < 0) x = screen->w+x-1;
     SDL_UpdateRect(screen, x, y, width, height);
+#endif
 }
 
 
@@ -233,7 +363,9 @@ void Sys_SendKeyEvents(void)
                    case SDLK_F10: sym = K_F10; break;
                    case SDLK_F11: sym = K_F11; break;
                    case SDLK_F12: sym = K_F12; break;
+#ifndef NXDK
                    case SDLK_BREAK:
+#endif
                    case SDLK_PAUSE: sym = K_PAUSE; break;
                    case SDLK_UP: sym = K_UPARROW; break;
                    case SDLK_DOWN: sym = K_DOWNARROW; break;

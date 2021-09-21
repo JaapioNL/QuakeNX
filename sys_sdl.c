@@ -1,14 +1,20 @@
 #ifdef _XBOX
+#ifndef NXDK
 #include <xtl.h>
+#endif
 #endif
 //#include <unistd.h>
 #include <signal.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <time.h>
+#ifndef NXDK
 #include <sys/types.h>
+#endif
 //#include <unistd.h>
+#ifndef NXDK
 #include <fcntl.h>
+#endif
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
@@ -20,6 +26,15 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <sys/mman.h>*/
+#endif
+
+#ifdef NXDK
+#include <windows.h> // Used for file I/O
+#include <hal/xbox.h>
+#include <hal/video.h>
+
+typedef unsigned long DWORD, *PDWORD, *LPDWORD;
+typedef void VOID, *PVOID, *LPVOID;
 #endif
 
 #include "quakedef.h"
@@ -63,7 +78,11 @@ void Sys_Printf (char *fmt, ...)
 void Sys_Quit (void)
 {
 	Host_Shutdown();
+#ifdef NXDK
+	XLaunchXBE("D:\\default.xbe");
+#else
 	XLaunchNewImage("D:\\default.xbe", NULL);
+#endif
 }
 
 void Sys_Init(void)
@@ -274,7 +293,11 @@ int	Sys_FileTime (char *path)
 void Sys_mkdir (char *path)
 {
 #ifdef __WIN32__
+#ifdef NXDK
+	CreateDirectoryA(path, NULL);
+#else
     mkdir (path);
+#endif
 #else
     mkdir (path, 0777);
 #endif
@@ -346,7 +369,11 @@ byte *Sys_ZoneBase (int *size)
 		while (*QUAKEOPT)
 			if (tolower(*QUAKEOPT++) == 'm')
 			{
+#ifdef NXDK
+				*size = Q_atof(QUAKEOPT) * 1024*1024;
+#else
 				*size = atof(QUAKEOPT) * 1024*1024;
+#endif
 				break;
 			}
 	}
@@ -389,6 +416,9 @@ int main (int c, char **v)
 
 	int		n, d = 0, slcl;
 
+#ifdef NXDK
+    XVideoSetMode(640, 480, 32, REFRESH_DEFAULT);
+#endif
 
 	moncontrol(0);
 
@@ -479,12 +509,13 @@ Sys_MakeCodeWriteable
 */
 void Sys_MakeCodeWriteable (unsigned long startaddr, unsigned long length)
 {
+#ifndef NXDK
 
 	DWORD  flOldProtect;
 
 	if (!VirtualProtect((LPVOID)startaddr, length, PAGE_READWRITE, &flOldProtect))
    		Sys_Error("Protection change failed\n");
-
+#endif
 }
 
  

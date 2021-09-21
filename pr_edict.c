@@ -743,7 +743,11 @@ qboolean	ED_ParseEpair (void *base, ddef_t *key, char *s)
 		break;
 		
 	case ev_float:
+#ifdef NXDK
+		*(float *)d = Q_atof (s);
+#else
 		*(float *)d = atof (s);
+#endif
 		break;
 		
 	case ev_vector:
@@ -755,7 +759,11 @@ qboolean	ED_ParseEpair (void *base, ddef_t *key, char *s)
 			while (*v && *v != ' ')
 				v++;
 			*v = 0;
+#ifdef NXDK
+			((float *)d)[i] = Q_atof (w);
+#else
 			((float *)d)[i] = atof (w);
+#endif
 			w = v = v+1;
 		}
 		break;

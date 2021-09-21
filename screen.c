@@ -50,7 +50,9 @@ int			scr_fullupdate;
 int			clearconsole;
 int			clearnotify;
 
+#ifndef NXDK
 viddef_t	vid;				// global video state
+#endif
 
 vrect_t		*pconupdate;
 vrect_t		scr_vrect;

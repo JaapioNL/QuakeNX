@@ -25,7 +25,11 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef _MSC_VER
 #include <unistd.h>
 #endif
+#ifdef NXDK
+#include <windows.h>
+#else
 #include <fcntl.h>
+#endif
 #include "quakedef.h"
 
 int 		con_linewidth;
@@ -222,7 +226,11 @@ void Con_Init (void)
 		if (strlen (com_gamedir) < (MAXGAMEDIRLEN - strlen (t2)))
 		{
 			sprintf (temp, "%s%s", com_gamedir, t2);
-			unlink (temp);
+#ifdef NXDK
+			DeleteFile(temp);
+#else
+			unlink (temp);			
+#endif
 		}
 	}
 
@@ -361,9 +369,20 @@ void Con_DebugLog(char *file, char *fmt, ...)
     va_start(argptr, fmt);
     vsprintf(data, fmt, argptr);
     va_end(argptr);
+
+#ifdef NXDK
+	FILE *logFile = fopen(file, "at");
+
+	if(logFile)
+	{
+		fwrite(data, 1, strlen(data), logFile);
+		fclose(logFile);
+	}
+#else
     fd = open(file, O_WRONLY | O_CREAT | O_APPEND, 0666);
     write(fd, data, strlen(data));
     close(fd);
+#endif
 }
 
 

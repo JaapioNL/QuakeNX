@@ -7,6 +7,10 @@
 
 #include <SDL.h>
 
+#ifdef NXDK
+#include "sdl_stubs.h"
+#endif
+
 #include "quakedef.h"
 
 static qboolean cdValid = false;
