@@ -1,7 +1,8 @@
 
 CFLAGS += -D _XBOX
-CFLAGS += -D SDL $(JAAPFLAGS)
+CFLAGS += -D SDL
 CFLAGS += -D __WIN32__
+CFLAGS += -D QHIGHRES
 
 # increase the stack limit to avoid stack overflow issues
 LDFLAGS += -stack:0x200000
